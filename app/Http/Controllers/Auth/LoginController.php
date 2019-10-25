@@ -36,4 +36,11 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function __invoke()
+    {
+        $this->seo()->setTitle('Login');
+
+        return $this->render('login');
+    }
 }

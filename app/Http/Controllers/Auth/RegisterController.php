@@ -40,6 +40,13 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    public function __invoke()
+    {
+        $this->seo()->setTitle('Register');
+
+        return $this->render('register');
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
