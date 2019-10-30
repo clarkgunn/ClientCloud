@@ -19,8 +19,11 @@
         "laravel/ui": "^1.1",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
+        "nunomaduro/phpinsights": "^1.9",
         "phpunit/phpunit": "^8.0",
-        "squizlabs/php_codesniffer": "^3.5"
+        "psalm/plugin-laravel": "^0.4.0",
+        "squizlabs/php_codesniffer": "^3.5",
+        "vimeo/psalm": "^3.6"
     },
     "config": {
         "optimize-autoloader": true,
@@ -50,7 +53,11 @@
     "prefer-stable": true,
     "scripts": {
 	"post-install-cmd": [
-	    "cp bootstrap/git/hooks/* .git/hooks"
+	    "cp bootstrap/git/hooks/* .git/hooks",
+	    "./vendor/bin/phpunit",
+	    "./vendor/bin/phpcs",
+	    "./vendor/bin/psalm --show-info=false",
+	    "./vendor/bin/phpinsights"
 	],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",

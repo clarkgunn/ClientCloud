@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="3.6.2@05ace258176795e87ef07b4262b5ceba3fd27de3">
+  <file src="app/Http/Controllers/FilesController.php">
+    <UndefinedClass occurrences="6">
+      <code>Response</code>
+      <code>Response</code>
+      <code>Response</code>
+      <code>Response</code>
+      <code>Response</code>
+      <code>Response</code>
+    </UndefinedClass>
+  </file>
+  <file src="config/insights.php">
+    <MissingDependency occurrences="4">
+      <code>AlphabeticallySortedUsesSniff</code>
+      <code>DeclareStrictTypesSniff</code>
+      <code>DisallowMixedTypeHintSniff</code>
+      <code>TypeHintDeclarationSniff</code>
+    </MissingDependency>
+  </file>
+  <file src="database/factories/FileFactory.php">
+    <UndefinedGlobalVariable occurrences="1">
+      <code>$factory</code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="database/factories/UserFactory.php">
+    <UndefinedGlobalVariable occurrences="1">
+      <code>$factory</code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="routes/api.php">
+    <UndefinedClass occurrences="1">
+      <code>Route</code>
+    </UndefinedClass>
+  </file>
+  <file src="routes/channels.php">
+    <UndefinedClass occurrences="1">
+      <code>Broadcast</code>
+    </UndefinedClass>
+  </file>
+  <file src="routes/console.php">
+    <UndefinedClass occurrences="1">
+      <code>Artisan</code>
+    </UndefinedClass>
+  </file>
+  <file src="routes/web.php">
+    <UndefinedClass occurrences="1">
+      <code>Auth</code>
+    </UndefinedClass>
+  </file>
+  <file src="storage/framework/views/003eb5f8d6158b7912ed71c21b6b58535b41cf9b.php">
+    <UndefinedGlobalVariable occurrences="3">
+      <code>$__env</code>
+      <code>$__env</code>
+      <code>$__env</code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="storage/framework/views/01efe9438d2b69b485543183aa3adefd476fcad3.php">
+    <UndefinedGlobalVariable occurrences="1">
+      <code>$files</code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="storage/framework/views/2289c22d10edb32a7f40d136e4441fb675976a8e.php">
+    <UndefinedClass occurrences="1">
+      <code>Route</code>
+    </UndefinedClass>
+  </file>
+  <file src="storage/framework/views/22938cde5f73904719b3a1aee76b0e21a8b0aaef.php">
+    <UndefinedGlobalVariable occurrences="1">
+      <code>$__env</code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="storage/framework/views/598bfaf353e7a2d42f348e5ed40b50537d174427.php">
+    <UndefinedGlobalVariable occurrences="1">
+      <code>$__env</code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="storage/framework/views/915fda743fe4a7f12fd96b02f5b266905e1a9b68.php">
+    <UndefinedGlobalVariable occurrences="1">
+      <code>$__env</code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="storage/framework/views/9eb00b01d8e6c59b24a9465c85e220a871020ed6.php">
+    <UndefinedGlobalVariable occurrences="1">
+      <code>$__env</code>
+    </UndefinedGlobalVariable>
+  </file>
+  <file src="storage/framework/views/f1ab9245aa850232dc9ac458df538ed6476bf39e.php">
+    <UndefinedClass occurrences="1">
+      <code>Route</code>
+    </UndefinedClass>
+  </file>
+</files>
