@@ -52,14 +52,16 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-	"post-install-cmd": [
-	    "cp bootstrap/git/hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push",
-	    "cp bootstrap/git/hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
-	    "./vendor/bin/phpunit --coverage-clover build/logs/clover.xml",
-	    "./vendor/bin/phpcs",
-	    "./vendor/bin/psalm --show-info=false",
-	    "./vendor/bin/phpinsights"
-	],
+        "hooks": [
+            "cp bootstrap/git/hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push",
+            "cp bootstrap/git/hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
+        ]
+        "post-install-cmd": [
+            "./vendor/bin/phpunit --coverage-clover clover.xml",
+            "./vendor/bin/phpcs",
+            "./vendor/bin/psalm --show-info=false",
+            "./vendor/bin/phpinsights"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
