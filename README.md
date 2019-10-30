@@ -1,4 +1,4 @@
-![ClientCloud Logo](docs/assets/logo.png)
+![ClientCloud Logo](docs/assets/cover.png)
 
 A client portal for cloud storage of deliverable assets.
 
