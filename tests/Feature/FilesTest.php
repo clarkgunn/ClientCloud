@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use App\User;
 use App\File;
+use App\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -27,6 +27,5 @@ class FilesTest extends TestCase
             ->get('/files')
             ->assertSeeText($file1->name)
             ->assertSeeText($file2->name);
-
     }
 }
