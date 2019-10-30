@@ -56,7 +56,7 @@
             "cp bootstrap/git/hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push",
             "cp bootstrap/git/hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit"
         ],
-        "post-install-cmd": [
+        "qa": [
             "./vendor/bin/phpunit --coverage-clover clover.xml",
             "./vendor/bin/phpcs",
             "./vendor/bin/psalm --show-info=false",
