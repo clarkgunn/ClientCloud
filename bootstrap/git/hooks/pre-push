@@ -9,7 +9,7 @@
  **/
 
 echo "Running tests.. ";
-exec('./vendor/bin/phpunit', $output, $returnCode);
+exec('composer run qa', $output, $returnCode);
 if ($returnCode !== 0) {
   // Show full output
   echo PHP_EOL . implode($output, PHP_EOL) . PHP_EOL;

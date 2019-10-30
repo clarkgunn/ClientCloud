@@ -14,6 +14,7 @@
         "laravel/tinker": "^1.0"
     },
     "require-dev": {
+        "codacy/coverage": "^1.4",
         "facade/ignition": "^1.4",
         "fzaninotto/faker": "^1.4",
         "laravel/ui": "^1.1",
@@ -58,6 +59,7 @@
         ],
         "qa": [
             "./vendor/bin/phpunit --coverage-clover clover.xml",
+	    "./vendor/bin/codacycoverage clover clover.xml",
             "./vendor/bin/phpcs",
             "./vendor/bin/psalm --show-info=false",
             "./vendor/bin/phpinsights"
