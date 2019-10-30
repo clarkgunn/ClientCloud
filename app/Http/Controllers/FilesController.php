@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\File;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
@@ -17,33 +15,27 @@ class FilesController extends Controller
         );
     }
 
-    public function create(): Response
-    {
-        //
-    }
-
-    public function store(Request $request): Response
-    {
-        //
-    }
-
-    public function show(File $file): Response
-    {
-        //
-    }
-
-    public function edit(File $file): Response
-    {
-        //
-    }
-
-    public function update(Request $request, File $file): Response
-    {
-        //
-    }
-
-    public function destroy(File $file): Response
-    {
-        //
-    }
+//    public function create(): Response
+//    {
+//    }
+//
+//    public function store(Request $request): Response
+//    {
+//    }
+//
+//    public function show(File $file): Response
+//    {
+//    }
+//
+//    public function edit(File $file): Response
+//    {
+//    }
+//
+//    public function update(Request $request, File $file): Response
+//    {
+//    }
+//
+//    public function destroy(File $file): Response
+//    {
+//    }
 }

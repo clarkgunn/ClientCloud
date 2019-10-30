@@ -62,7 +62,7 @@
 	    "./vendor/bin/codacycoverage clover clover.xml",
             "./vendor/bin/phpcs",
             "./vendor/bin/psalm --show-info=false",
-            "./vendor/bin/phpinsights"
+            "./vendor/bin/phpinsights --no-interaction --min-quality=95 --min-complexity=95 --min-architecture=95 --min-style=95"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
