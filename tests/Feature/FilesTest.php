@@ -27,6 +27,5 @@ class FilesTest extends TestCase
             ->get('/files')
             ->assertSeeText($file1->name)
             ->assertSeeText($file2->name);
-
     }
 }
