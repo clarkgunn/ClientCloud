@@ -53,7 +53,8 @@
     "prefer-stable": true,
     "scripts": {
 	"post-install-cmd": [
-	    "cp bootstrap/git/hooks/* .git/hooks",
+	    "cp bootstrap/git/hooks/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push",
+	    "cp bootstrap/git/hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
 	    "./vendor/bin/phpunit",
 	    "./vendor/bin/phpcs",
 	    "./vendor/bin/psalm --show-info=false",
