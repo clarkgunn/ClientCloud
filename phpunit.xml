@@ -22,11 +22,12 @@
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./app</directory>
+            <directory suffix=".php">app</directory>
             <exclude>
-                <directory suffix=".php">./app/Providers</directory>
-                <directory suffix=".php">./app/Console</directory>
-                <directory suffix=".php">./app/Exceptions</directory>
+                <file>app/Console/Kernel.php</file>
+                <directory>app/Http/Middleware</directory>
+                <directory>app/Http/Controllers/Auth</directory>
+                <directory>app/Providers</directory>
             </exclude>
         </whitelist>
     </filter>
