@@ -58,8 +58,8 @@
             "cp bootstrap/git/hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit"
         ],
         "qa": [
-            "./vendor/bin/phpunit --coverage-clover clover.xml",
-	    "./vendor/bin/codacycoverage clover clover.xml",
+            "./vendor/bin/phpunit --coverage-clover build/logs/clover.xml",
+	    "./vendor/bin/codacycoverage clover",
             "./vendor/bin/phpcs",
             "./vendor/bin/psalm --show-info=false",
             "php artisan insights --no-interaction --min-quality=95 --min-complexity=95 --min-architecture=95 --min-style=95"
