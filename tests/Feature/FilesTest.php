@@ -12,26 +12,23 @@ use Tests\TestCase;
 class FilesTest extends TestCase
 {
     use DatabaseMigrations;
-    
-    public function test_user_can_upload_a_file(): void
+
+    public function test_user_can_upload_an_image(): void
     {
         $this->markTestIncomplete('TODO');
         $this->withoutExceptionHandling();
-        Storage::fake('local');
+        Storage::fake('images');
 
         $user = factory(User::class)->create();
         $fileName = 'photo1.jpg';
+        $file = UploadedFile::fake()->image($fileName);
 
-        $this->actingAs($user)->postJson(
+        $this->postJson(
             '/files',
-            [UploadedFile::fake()->image($fileName)]
+            ['file' => $file]
         );
 
-        Storage::disk('local')->assertExists($fileName);
-        $this->assertEquals(
-            $fileName,
-            $user->files()->getFirstMedia()->name
-        );
+        Storage::disk('images')->assertExists($file->hashName());
     }
 
     public function test_user_can_see_their_files(): void

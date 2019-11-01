@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
@@ -15,13 +16,23 @@ class FilesController extends Controller
         );
     }
 
-//    public function create(): Response
+//    public function create(Request $request): Response
 //    {
 //    }
-//
-//    public function store(Request $request): Response
-//    {
-//    }
+
+    public function store(Request $request): View
+    {
+        $file = $request->file('file');
+
+        if ($file->isValid()) {
+            $file->store('');
+        }
+
+        return view(
+            'files.index',
+            ['files' => []]
+        );
+    }
 //
 //    public function show(File $file): Response
 //    {
